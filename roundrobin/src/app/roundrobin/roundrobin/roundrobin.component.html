@@ -4,15 +4,15 @@
   <mat-form-field>
       <input matInput formControlName="total" placeholder="Total Players" type="number">
   </mat-form-field>
+  <br>
   <button (click)="updateTotalPlayersFields()">Update Total Players</button>
-  <mat-form-field *ngFor="let player of players">
-      <input matInput formControlName={{player.name}} placeholder={{player.name}}>
-  </mat-form-field>
+  <div *ngFor="let player of players">
+      <mat-form-field>
+          <input matInput formControlName={{player.name}} placeholder={{player.name}}>
+      </mat-form-field>
+  </div>
+  <br>
   <button (click)="generateRounds()">Generate Rounds</button>
 </form>
 
-<div>
-
-<!-- <pre> {{form }}</pre>-->
-</div>
-
+{{roundsArray}}

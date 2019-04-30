@@ -43,7 +43,6 @@ export class RoundrobinComponent implements OnInit, MatFormFieldModule {
   }
 
   generateRounds() {
-    console.log('qqqq', this.form)
     const totalPlayers = this.form.value.total;
     let totalRounds = totalPlayers * (totalPlayers - 1);
     this.roundsArray = [];
@@ -86,9 +85,7 @@ export class RoundrobinComponent implements OnInit, MatFormFieldModule {
 							host = 0;
 							challenger = 1;
 					}
-
 					hostCounter = 0;
-					
 			}
 		}
     console.log('roundsArray', this.roundsArray)
